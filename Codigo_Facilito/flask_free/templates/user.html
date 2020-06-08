@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Head Text Index </title>
+</head>
+<body>
+
+    <h4>Hello User</h4>
+    <h4> {{ name }} </h4>
+    <p> {{ age }} </p>
+
+    {% if age > 18 %}
+        <p> is more then age old</p>
+    {% endif %}
+
+    {% for item in list %}
+        <p> {{ item }}</p>
+    {% endfor %}
+
+    <p> out of if conditional and for </p>
+</body>
+</html>
