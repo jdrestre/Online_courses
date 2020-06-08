@@ -1,3 +1,8 @@
+def say_hi():
+  print("Hello World")
+
+say_hi()
+
 def crear_mensaje(nombre):
   return "Hola {}, bienvenido al curso de python 3".format(nombre)
 
