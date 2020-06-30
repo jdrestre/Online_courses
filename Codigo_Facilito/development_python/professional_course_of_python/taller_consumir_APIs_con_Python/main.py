@@ -1,7 +1,48 @@
 import requests
-import json
+#import json
+
 
 if __name__ == "__main__":
+    url = 'https://esc365.escardio.org/Congress/EuroCMR-2019/Closing-plenary-what-is-in-the-crystal-ball-of-CMR-from-Venice-to-Mars/186966-cmr-imaging-of-myocardial-fibers-do-we-need-it#slide'
+
+    response = requests.get(url, stream=True)
+    with open('video.mp4', 'wb') as file:
+        for chunk in response.iter_content():
+            file.write(chunk)
+    
+    response.close()
+
+
+""" if __name__ == "__main__":
+    url = 'http://httpbin.org/delete'
+    payload = { 'name': 'Juan', 'last_name': 'Restrepo', 'age': 41 }
+    headers = { 'Conten-Type' : 'applicationes/json', 'token' : '12345' }
+
+    response = requests.put(url, data=json.dumps(payload), headers=headers)
+    response = requests.delete(url, data=json.dumps(payload), headers=headers)
+    print(response.url)
+
+    if response.status_code == 200:
+        print(response.content) # imprime json
+        headers_response = response.headers
+        server = headers_response['Server']
+        print(server) """
+
+""" if __name__ == "__main__":
+    url = 'http://httpbin.org/post'
+    payload = { 'name': 'Juan', 'last_name': 'Restrepo', 'age': 41 }
+    headers = { 'Conten-Type' : 'applicationes/json', 'token' : '12345' }
+
+    response = requests.post(url, data=json.dumps(payload), headers=headers)
+    print(response.url)
+
+    if response.status_code == 200:
+        print(response.content) # imprime json
+        headers_response = response.headers
+        server = headers_response['Server']
+        print(server) """
+
+""" if __name__ == "__main__":
     url = 'http://httpbin.org/post'
     payload = { 'name': 'Juan', 'last_name': 'Restrepo', 'age': 41 }
 
@@ -11,7 +52,7 @@ if __name__ == "__main__":
     print(response.url)
 
     if response.status_code == 200:
-        print(response.content) # imprime json 
+        print(response.content) # imprime json  """
 
 """ if __name__ == "__main__":
     url = 'http://httpbin.org/get'
