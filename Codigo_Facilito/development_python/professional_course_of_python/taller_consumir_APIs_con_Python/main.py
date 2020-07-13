@@ -5,7 +5,7 @@ import requests
 if __name__ == "__main__":
     url = 'https://www.goodfreephotos.com/albums/maldives/resort-beach-and-ocean-landscape-in-the-maldives.jpg'
     response = requests.get(url, stream=True)
-    with open('pic.png', 'wb') as file:
+    with open('pic.jpg', 'wb') as file:
         for chunk in response.iter_content():
             file.write(chunk)
     
