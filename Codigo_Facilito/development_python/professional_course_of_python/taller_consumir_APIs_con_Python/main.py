@@ -11,7 +11,6 @@ if __name__ == "__main__":
     
     response.close()
 
-
 """ if __name__ == "__main__":
     url = 'http://httpbin.org/delete'
     payload = { 'name': 'Juan', 'last_name': 'Restrepo', 'age': 41 }
